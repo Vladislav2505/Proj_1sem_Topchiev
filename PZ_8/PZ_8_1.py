@@ -7,6 +7,12 @@ dictionary = {"птица": "bird", "слон": "elephant", "мышь": "mouse",
 
 # Задаем русский словарь
 dictionary_rus = ('птица', 'слон', 'мышь', 'кот', 'собака', 'попугай', 'волк', 'орел', 'жираф', 'человек')
-print("Доступные слова", dictionary_rus)
-word = input("Выберите слово из списка: ")  # Вводим слово
-print("Перевод: ", dictionary.get(word.lower()))  # Вывод перевода
+result = False
+while not result:
+    print("Доступные слова", dictionary_rus)
+    word = input("Выберите слово из списка: ").lower()  # Вводим слово
+    if word not in dictionary.keys():
+        print('Такого слова нет в словаре')
+    else:
+        print("Перевод: ", dictionary.get(word))  # Вывод перевода
+        result = True
