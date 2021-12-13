@@ -21,24 +21,16 @@ print("БукМаркет", bykmarket)
 print("Галерея", galerea)
 
 # Проверка наличия книг Пушкина и Тютчева в магазинах
-if "Пушкин" and "Тютчев" not in magistr:
-    pass
-else:
+if "Пушкин" and "Тютчев" in magistr:
     novoe.add("Магистр")
 
-if "Пушкин" and "Тютчев" not in domknig:
-    pass
-else:
+if "Пушкин" and "Тютчев" in domknig:
     novoe.add("ДомКниги")
 
-if "Пушкин" and "Тютчев" not in bykmarket:
-    pass
-else:
+if "Пушкин" and "Тютчев" in bykmarket:
     novoe.add("БукМаркет")
 
-if "Пушкин" and "Тютчев" not in galerea:
-    pass
-else:
+if "Пушкин" and "Тютчев" in galerea:
     novoe.add("Галерея")
 
 # Вывод магазина с книгами Пушкина и Тютчева
