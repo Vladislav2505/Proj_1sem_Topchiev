@@ -17,4 +17,5 @@ generator = func_generator(lst)  # создаем генератор
 for j in generator:
     q.append(j)
 
+print("Входные данные: ", lst)
 print("Результат: ", q)  # вывод результата
