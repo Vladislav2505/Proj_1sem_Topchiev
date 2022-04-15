@@ -1,6 +1,6 @@
 import sqlite3 as sq
 
-with sq.connect('saper.bd') as con:
+with sq.connect('saper.db') as con:
     cur = con.cursor()
     cur.execute("""CREATE TABLE IF NOT EXISTS users (user_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
