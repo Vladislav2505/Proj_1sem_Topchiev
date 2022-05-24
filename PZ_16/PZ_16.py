@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 # Вариант №28
 # Приложение ПАРИКМАХЕРСКАЯ для некоторой организации.
 
-=======
->>>>>>> origin/master
 import tkinter as tk
 from tkinter import ttk
 import sqlite3 as sq
@@ -18,14 +15,10 @@ class Main(tk.Frame):
         self.db = db
         self.view_records()
 
-<<<<<<< HEAD
     def init_main(self):  # Функция главного окна
 
         # Создание кнопок и добавление картинок
 
-=======
-    def init_main(self):
->>>>>>> origin/master
         toolbar = tk.Frame(bg='#009E8E', bd=4)
         toolbar.pack(side=tk.TOP, fill=tk.X)
 
@@ -59,11 +52,8 @@ class Main(tk.Frame):
         self.tree = ttk.Treeview(self, columns=('client_id', 'master', 'client', 'sex', 'Haircut', 'price'), height=15,
                                  show='headings')
 
-<<<<<<< HEAD
         # Колонки БД на главном окне
 
-=======
->>>>>>> origin/master
         self.tree.column('client_id', width=50, anchor=tk.CENTER)
         self.tree.column('master', width=180, anchor=tk.CENTER)
         self.tree.column('client', width=140, anchor=tk.CENTER)
@@ -127,14 +117,10 @@ class Child(tk.Toplevel):
         self.init_child()
         self.view = app
 
-<<<<<<< HEAD
     def init_child(self):  # Функция дочернего окна
 
         # Оформление дочернего окна
 
-=======
-    def init_child(self):
->>>>>>> origin/master
         self.title('Добавить клиента')
         self.geometry('400x220+400+300')
         self.resizable(False, False)
@@ -186,11 +172,8 @@ class Child(tk.Toplevel):
 
 
 class Update(Child):
-<<<<<<< HEAD
     """Класс для окна редактирования записи"""
 
-=======
->>>>>>> origin/master
     def __init__(self):
         super().__init__(root, app)
         self.init_edit()
@@ -210,22 +193,15 @@ class Update(Child):
 
 
 class Search(tk.Toplevel):
-<<<<<<< HEAD
     """Класс для окна поиска"""
 
-=======
->>>>>>> origin/master
     def __init__(self):
         super().__init__()
         self.init_search()
         self.view = app
 
-<<<<<<< HEAD
-    def init_search(self):  # Функция получения информации по стоимости (Значение > стоимость)
-=======
     def init_search(self):
->>>>>>> origin/master
-        self.title("Поиск (> стоимость )")
+        self.title("Поиск (> стоимость )")  # Функция получения информации по стоимости (Значение > стоимость)
         self.geometry("300x100+400+300")
         self.resizable(False, False)
 
@@ -245,11 +221,8 @@ class Search(tk.Toplevel):
 
 
 class DB:
-<<<<<<< HEAD
     """Класс для правильной работы БД"""
 
-=======
->>>>>>> origin/master
     def __init__(self):
         with sq.connect('DB/services.db') as self.con:
             self.cur = self.con.cursor()
